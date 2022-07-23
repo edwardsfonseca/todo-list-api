@@ -10,3 +10,164 @@
     import 'relative/path/to/stylesheet.scss';
 
 */
+body{
+    background-color: #1f1616;
+}
+h1{
+    color: #bfbbbb;
+    font-size: 50px;
+    font-family: 'Catamaran', sans-serif;
+}
+.fas{
+    margin: 10px;
+}
+.coco{
+    background: rgba(130, 133, 118, 0.629);
+    margin-inline: auto;
+    width: 501px;
+    display: flex;
+    color:rgb(249, 255, 245);
+    margin-top: 20px;
+    border-radius: 4px 0 0 4px;
+    border: 2px solid #1d1d1f;
+    justify-content: center;
+    align-items: center;
+}
+.formulario{
+    background: #161a2b;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    width: 520px;
+    min-height: 600px;
+    text-align: center;
+    margin: 128px auto;
+    border-radius: 10px;
+    padding-bottom: 32px;
+}
+.formulario-input{
+padding: 14px 32px 14px 16px;
+border-radius: 4px 0 0 4px;
+border: 2px solid #5d0cff;
+outline: none;
+width: 320px;
+background: transparent;
+color: #fff;
+}
+.container{
+    height: 100%;
+    position: relative;
+    perspective: 800px;
+}
+.btn{
+    border:none;
+    position: relative;
+    background: none;
+    padding: 13px 30px;
+    margin: 10px;
+    display: inline-block;
+    text-transform: uppercase;
+    background: #3fbb20;
+    color:#fff;
+    letter-spacing: 2px;
+    font-size: 1rem;
+    font-weight: 800;
+    transform-style: preserve-3d ;
+    outline: none;
+    outline: 1px solid transparent;
+    transition: all 0.5s ease-out;
+    cursor:pointer;
+
+}
+.btn:after{
+    
+    content: "Button";
+    position: absolute;
+    padding: 13px 30px;
+    z-index:-1;
+    transition: all 0.5s ease-out;
+    width: 100%;
+    left: 0;
+    top:-100%;
+    background: #c20b94;
+    transform-origin:0% 100% ;
+    transform: rotateX(90deg);
+}
+.btn:hover{
+    transform: translateY(40px) rotateX(-90deg);
+}
+.contador{
+    margin-top: 20px;
+    position: relative;
+    background: black;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    padding: 10px 30px;
+    transition: 0.5s;
+    width: 90%;
+    margin: auto;
+
+}
+.contador:hover
+{
+    letter-spacing: 0.25em;
+    background:var(--clr);
+    color: var(--clr);
+    box-shadow: 0 0 35px var(--clr);
+}
+.contador::before
+{
+    content: "";
+    position: absolute;
+    inset: 2px;
+    background: #27282c;
+}
+.contador span{
+    position: relative;
+    z-index:1;
+}
+.contador i
+{
+    position: absolute;
+    inset: 0;
+    display: block;
+}
+.contador i::before
+{
+    content: "";
+    position: absolute;
+    top:-3.5px;
+    left: 80%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #27282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+.contador:hover i::before
+{
+    width: 20px;
+    left: 20%;
+}
+.contador i::after
+{
+    content: "";
+    position: absolute;
+    bottom:-3.5px;
+    left: 20%;
+    width: 10px;
+    height: 5px;
+    border: 2px solid var(--clr);
+    background: #27282c;
+    transform: translateX(-50%);
+    transition: 0.5s;
+}
+.contador:hover i::after
+{
+    width: 20px;
+    left: 80%;
+}
